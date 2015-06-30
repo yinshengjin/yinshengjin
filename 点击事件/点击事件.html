@@ -1,0 +1,52 @@
+<!doctype html>
+ <html>
+<head>
+	<meta name=""charset="utf-8">
+	<title>点击事件</title>
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<!-- <script type="text/javascript" src="my.js"></script> -->
+	<!-- <script type="text/javascript" src="jquery-1.8.3.min.js"></script> -->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<style>
+		*{margin:0px;
+			padding:0px;}
+		body{position: relative;}
+		figure img{width:100%;}
+		div{width: 430px;
+				height: 75px;
+				position: absolute;
+				border:1px solid #f00;
+				left:80px;
+				bottom:72px;}
+	</style>
+</head>
+<body>
+	<figure><img src="images/H5-1.jpg"></figure>
+	<div></div>
+</body>
+<script type="text/javascript">
+	var div=document.getElementsByTagName('div')
+	function resetPage() {
+						// alert(111);
+            var deviceWidth = document.documentElement.clientWidth;
+
+            scale = deviceWidth / 640;
+            
+            document.body.style.zoom = scale;
+            
+        }
+   // resetPage();
+  window.onload = function(){
+  	resetPage();
+  }
+  window.onresize = function () {
+            resetPage();
+  }
+  div[0].onclick=function(){
+   		resetPage();
+   		alert(111);
+   }
+
+</script>
+</html>
